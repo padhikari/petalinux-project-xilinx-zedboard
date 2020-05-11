@@ -2,7 +2,7 @@
 
 PRJ=$(pwd)
 
-PRJ_DIR=$PRJ/pz7010_fmc2_2019_1
+PRJ_DIR=$PRJ/avnet-digilent-zedboard-2019.1
 
 cd $PRJ_DIR
 

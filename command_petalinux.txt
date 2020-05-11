@@ -1,0 +1,78 @@
+    1  echo $PETALINUX 
+    2  ls
+    3  clear
+    4  petalinux-create -t project -s pz7010_fmc2_2019_1.bsp 
+    5  ls
+    6  cd pz7010_fmc2_2019_1
+    7  ls
+    8  petalinux-config 
+    9  clear
+   10  ls
+   11  git add .
+   12  git status 
+   13  ls
+   14  code ,
+   15  clear
+   16  ls
+   17  gs
+   18  ls
+   19  git status 
+   20  clear
+   21  ls
+   22  gs
+   23  ls
+   24  petalinux-config 
+   25  petalinux-config -c kernel 
+   26  gs
+   27  clear
+   28  git status 
+   29  ls
+   30  petalinux-config -c u-boot
+   31  petalinux-config -c busybox 
+   32  clear
+   33  ls
+   34  cd ..
+   35  ls
+   36  mkdir hdf 
+   37  gpio@e000a000 {
+   38  petalinux-config --get-hw-description=
+   39  clear
+   40  ls
+   41  cd pz7010_fmc2_2019_1
+   42  ls
+   43  petalinux-config --get-hw-description=../hdf/
+   44  ls
+   45  cd ..
+   46  ls
+   47  git add .
+   48  gs
+   49  cd pz7010_fmc2_2019_1
+   50  ls
+   51  petalinux-build 
+   52  clear
+   53  ls
+   54  sudo apt-get update
+   55  sudo apt-get install device-tree-compiler
+   56  petalinux-build 
+   57  petalinux-build -c device-tree
+   58  petalinux-build 
+   59  ls
+   60  cd /tftpboot/
+   61  ls
+   62  clear
+   63  cd /home/pabitra/
+   64  ls
+   65  cd project/
+   66  ls
+   67  source /opt/Xilinx/petalinux/settings.sh
+   68  echo $PETALINUX
+   69  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   70  clear
+   71  ls
+   72  cd hdf
+   73  ls
+   74  history
+   75  ls
+   76  cd..
+   77  cd ..
+   78  history > command_petalinux.txt
